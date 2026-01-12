@@ -1,0 +1,64 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "boucle.py"
+.set name		 "<module>"
+.set stack_size		 4
+.set arg_count		 0
+
+.interned
+	"math"
+	"range"
+	"i"
+	"sqrt"
+	"<module>"
+
+.consts
+	-1
+	None
+	1
+	101
+
+.names
+	"math"
+	"range"
+	"i"
+	"sqrt"
+
+.text
+.line 1
+	LOAD_CONST            0	# -1
+	LOAD_CONST            1	# None
+	IMPORT_NAME           0
+	STORE_NAME            0	# "math"
+.line 3
+	SETUP_LOOP            label_2
+	LOAD_NAME             1	# "range"
+	LOAD_CONST            2	# 1
+	LOAD_CONST            3	# 101
+	CALL_FUNCTION         2
+	GET_ITER              
+label_0:
+	FOR_ITER              label_1
+	STORE_NAME            2	# "i"
+.line 4
+	LOAD_NAME             2	# "i"
+	LOAD_NAME             0	# "math"
+	LOAD_ATTR             3
+	LOAD_NAME             2	# "i"
+	CALL_FUNCTION         1
+	BUILD_TUPLE           2
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_ABSOLUTE         label_0
+label_1:
+	POP_BLOCK             
+label_2:
+	LOAD_CONST            1	# None
+	RETURN_VALUE          
+
+# Disassembled Thu Jan 16 11:40:06 2025
+

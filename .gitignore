@@ -1,0 +1,12 @@
+*.o
+*.exe
+bin/
+*~
+*.vc.db*
+.gdb_history
+# pour macos
+.DS_Store
+
+# Ignore test_oracle traces
+*.stderr
+*.stdout

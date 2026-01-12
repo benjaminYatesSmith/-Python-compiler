@@ -1,0 +1,79 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "fonction_recursive.py"
+.set name		 "<module>"
+.set stack_size		 1
+.set arg_count		 0
+
+.interned
+	"factorielle"
+	"n"
+	"<module>"
+	""
+
+.consts
+.code_start 1
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "fonction_recursive.py"
+.set name		 "factorielle"
+.set stack_size		 4
+.set arg_count		 1
+
+.consts
+	None
+	0
+	1
+
+.names
+	"factorielle"
+
+.varnames
+	"n"
+
+.text
+.line 3
+	LOAD_FAST             0	# "n"
+	LOAD_CONST            1	# 0
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_TRUE      label_0
+	LOAD_FAST             0	# "n"
+	LOAD_CONST            2	# 1
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_1
+.line 4
+label_0:
+	LOAD_CONST            2	# 1
+	RETURN_VALUE          
+.line 7
+label_1:
+	LOAD_FAST             0	# "n"
+	LOAD_GLOBAL           0
+	LOAD_FAST             0	# "n"
+	LOAD_CONST            2	# 1
+	BINARY_SUBTRACT       
+	CALL_FUNCTION         1
+	BINARY_MULTIPLY       
+	RETURN_VALUE          
+	LOAD_CONST            0	# None
+	RETURN_VALUE          
+.code_end
+	None
+
+.names
+	"factorielle"
+
+.text
+.line 1
+	LOAD_CONST            0	# <code:"factorielle">
+	MAKE_FUNCTION         0
+	STORE_NAME            0	# "factorielle"
+	LOAD_CONST            1	# None
+	RETURN_VALUE          
+
+# Disassembled Thu Jan 16 16:38:13 2025
+

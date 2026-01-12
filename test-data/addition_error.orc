@@ -1,0 +1,1 @@
+Erreur de syntaxe: Aucun lexème ne correspond à la position courante (line 5, colonne 0).

@@ -1,0 +1,29 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "hello_world.py"
+.set name		 "<module>"
+.set stack_size		 1
+.set arg_count		 0
+
+.interned
+	"<module>"
+	""
+
+.consts
+	"Hello, world!"
+	None
+
+.text
+.line 1
+	LOAD_CONST            0	# "Hello, world!"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	LOAD_CONST            1	# None
+	RETURN_VALUE          
+
+# Disassembled Thu Jan 16 11:40:32 2025
+

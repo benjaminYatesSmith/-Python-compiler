@@ -1,0 +1,49 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "test-data/fonction_simple_easy.py"
+.set name		 "<module>"
+.set stack_size		 1
+.set arg_count		 0
+
+.interned
+	"fonction_simple"
+	"<module>"
+	""
+
+.consts
+.code_start 1
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "test-data/fonction_simple_easy.py"
+.set name		 "fonction_simple"
+.set stack_size		 1
+.set arg_count		 0
+
+.consts
+	None
+	1
+
+.text
+.line 2
+	LOAD_CONST            1	# 1
+	RETURN_VALUE          
+.code_end
+	None
+
+.names
+	"fonction_simple"
+
+.text
+.line 1
+	LOAD_CONST            0	# <code:"fonction_simple">
+	MAKE_FUNCTION         0
+	STORE_NAME            0	# "fonction_simple"
+	LOAD_CONST            1	# None
+	RETURN_VALUE          
+
+# Disassembled Fri Jan 17 17:13:05 2025
+

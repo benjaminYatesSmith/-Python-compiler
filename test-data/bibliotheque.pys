@@ -1,0 +1,581 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "bibliotheque.py"
+.set name		 "<module>"
+.set stack_size		 4
+.set arg_count		 0
+
+.interned
+	"Auteur"
+	"nom"
+	"prenom"
+	"self"
+	"__init__"
+	"format"
+	"__str__"
+	"__name__"
+	"__module__"
+	"Livre"
+	"titre"
+	"auteur"
+	"annee_publication"
+	"Bibliotheque"
+	"livres"
+	"append"
+	"livre"
+	"ajouter_livre"
+	"afficher_livres"
+	"trouver_livres_par_auteur"
+	"__main__"
+	"Hugo"
+	"Victor"
+	"Dumas"
+	"Alexandre"
+	"auteur1"
+	"auteur2"
+	"livre1"
+	"livre2"
+	"livre3"
+	"bibliotheque"
+	"livres_hugo"
+	"<module>"
+
+.consts
+	"Auteur"
+.code_start 3
+.set version_pyvm	 62211
+.set flags		 0x00000042
+.set filename		 "bibliotheque.py"
+.set name		 "Auteur"
+.set stack_size		 1
+.set arg_count		 0
+
+.consts
+.code_start 4
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "bibliotheque.py"
+.set name		 "__init__"
+.set stack_size		 2
+.set arg_count		 3
+
+.consts
+	None
+
+.names
+	"nom"
+	"prenom"
+
+.varnames
+	"self"
+	"nom"
+	"prenom"
+
+.text
+.line 5
+	LOAD_FAST             1	# "nom"
+	LOAD_FAST             0	# "self"
+	STORE_ATTR            0
+.line 6
+	LOAD_FAST             2	# "prenom"
+	LOAD_FAST             0	# "self"
+	STORE_ATTR            1
+	LOAD_CONST            0	# None
+	RETURN_VALUE          
+.code_end
+.code_start 8
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "bibliotheque.py"
+.set name		 "__str__"
+.set stack_size		 3
+.set arg_count		 1
+
+.consts
+	None
+	"{} {}"
+
+.names
+	"format"
+	"prenom"
+	"nom"
+
+.varnames
+	"self"
+
+.text
+.line 9
+	LOAD_CONST            1	# "{} {}"
+	LOAD_ATTR             0
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             1
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             2
+	CALL_FUNCTION         2
+	RETURN_VALUE          
+.code_end
+
+.names
+	"__name__"
+	"__module__"
+	"__init__"
+	"__str__"
+
+.text
+.line 3
+	LOAD_NAME             0	# "__name__"
+	STORE_NAME            1	# "__module__"
+.line 4
+	LOAD_CONST            0	# <code:"__init__">
+	MAKE_FUNCTION         0
+	STORE_NAME            2	# "__init__"
+.line 8
+	LOAD_CONST            1	# <code:"__str__">
+	MAKE_FUNCTION         0
+	STORE_NAME            3	# "__str__"
+	LOAD_LOCALS           
+	RETURN_VALUE          
+.code_end
+	"Livre"
+.code_start 11
+.set version_pyvm	 62211
+.set flags		 0x00000042
+.set filename		 "bibliotheque.py"
+.set name		 "Livre"
+.set stack_size		 1
+.set arg_count		 0
+
+.consts
+.code_start 12
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "bibliotheque.py"
+.set name		 "__init__"
+.set stack_size		 2
+.set arg_count		 4
+
+.consts
+	None
+
+.names
+	"titre"
+	"auteur"
+	"annee_publication"
+
+.varnames
+	"self"
+	"titre"
+	"auteur"
+	"annee_publication"
+
+.text
+.line 13
+	LOAD_FAST             1	# "titre"
+	LOAD_FAST             0	# "self"
+	STORE_ATTR            0
+.line 14
+	LOAD_FAST             2	# "auteur"
+	LOAD_FAST             0	# "self"
+	STORE_ATTR            1
+.line 15
+	LOAD_FAST             3	# "annee_publication"
+	LOAD_FAST             0	# "self"
+	STORE_ATTR            2
+	LOAD_CONST            0	# None
+	RETURN_VALUE          
+.code_end
+.code_start 17
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "bibliotheque.py"
+.set name		 "__str__"
+.set stack_size		 4
+.set arg_count		 1
+
+.consts
+	None
+	"{} par {} ({})."
+
+.names
+	"format"
+	"titre"
+	"auteur"
+	"annee_publication"
+
+.varnames
+	"self"
+
+.text
+.line 18
+	LOAD_CONST            1	# "{} par {} ({})."
+	LOAD_ATTR             0
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             1
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             2
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             3
+	CALL_FUNCTION         3
+	RETURN_VALUE          
+.code_end
+
+.names
+	"__name__"
+	"__module__"
+	"__init__"
+	"__str__"
+
+.text
+.line 11
+	LOAD_NAME             0	# "__name__"
+	STORE_NAME            1	# "__module__"
+.line 12
+	LOAD_CONST            0	# <code:"__init__">
+	MAKE_FUNCTION         0
+	STORE_NAME            2	# "__init__"
+.line 17
+	LOAD_CONST            1	# <code:"__str__">
+	MAKE_FUNCTION         0
+	STORE_NAME            3	# "__str__"
+	LOAD_LOCALS           
+	RETURN_VALUE          
+.code_end
+	"Bibliotheque"
+.code_start 20
+.set version_pyvm	 62211
+.set flags		 0x00000042
+.set filename		 "bibliotheque.py"
+.set name		 "Bibliotheque"
+.set stack_size		 1
+.set arg_count		 0
+
+.consts
+.code_start 21
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "bibliotheque.py"
+.set name		 "__init__"
+.set stack_size		 2
+.set arg_count		 1
+
+.consts
+	None
+
+.names
+	"livres"
+
+.varnames
+	"self"
+
+.text
+.line 22
+	BUILD_LIST            0
+	LOAD_FAST             0	# "self"
+	STORE_ATTR            0
+	LOAD_CONST            0	# None
+	RETURN_VALUE          
+.code_end
+.code_start 24
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "bibliotheque.py"
+.set name		 "ajouter_livre"
+.set stack_size		 2
+.set arg_count		 2
+
+.consts
+	None
+
+.names
+	"livres"
+	"append"
+
+.varnames
+	"self"
+	"livre"
+
+.text
+.line 25
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             0
+	LOAD_ATTR             1
+	LOAD_FAST             1	# "livre"
+	CALL_FUNCTION         1
+	POP_TOP               
+	LOAD_CONST            0	# None
+	RETURN_VALUE          
+.code_end
+.code_start 27
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "bibliotheque.py"
+.set name		 "afficher_livres"
+.set stack_size		 2
+.set arg_count		 1
+
+.consts
+	None
+
+.names
+	"livres"
+
+.varnames
+	"self"
+	"livre"
+
+.text
+.line 28
+	SETUP_LOOP            label_2
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             0
+	GET_ITER              
+label_0:
+	FOR_ITER              label_1
+	STORE_FAST            1	# "livre"
+.line 29
+	LOAD_FAST             1	# "livre"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_ABSOLUTE         label_0
+label_1:
+	POP_BLOCK             
+label_2:
+	LOAD_CONST            0	# None
+	RETURN_VALUE          
+.code_end
+.code_start 31
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "bibliotheque.py"
+.set name		 "trouver_livres_par_auteur"
+.set stack_size		 4
+.set arg_count		 2
+
+.consts
+	None
+
+.names
+	"livres"
+	"auteur"
+
+.varnames
+	"self"
+	"auteur"
+	"livre"
+
+.text
+.line 32
+	BUILD_LIST            0
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             0
+	GET_ITER              
+label_0:
+	FOR_ITER              label_1
+	STORE_FAST            2	# "livre"
+	LOAD_FAST             2	# "livre"
+	LOAD_ATTR             1
+	LOAD_FAST             1	# "auteur"
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_0
+	LOAD_FAST             2	# "livre"
+	LIST_APPEND           2
+	JUMP_ABSOLUTE         label_0
+label_1:
+	RETURN_VALUE          
+.code_end
+
+.names
+	"__name__"
+	"__module__"
+	"__init__"
+	"ajouter_livre"
+	"afficher_livres"
+	"trouver_livres_par_auteur"
+
+.text
+.line 20
+	LOAD_NAME             0	# "__name__"
+	STORE_NAME            1	# "__module__"
+.line 21
+	LOAD_CONST            0	# <code:"__init__">
+	MAKE_FUNCTION         0
+	STORE_NAME            2	# "__init__"
+.line 24
+	LOAD_CONST            1	# <code:"ajouter_livre">
+	MAKE_FUNCTION         0
+	STORE_NAME            3	# "ajouter_livre"
+.line 27
+	LOAD_CONST            2	# <code:"afficher_livres">
+	MAKE_FUNCTION         0
+	STORE_NAME            4	# "afficher_livres"
+.line 31
+	LOAD_CONST            3	# <code:"trouver_livres_par_auteur">
+	MAKE_FUNCTION         0
+	STORE_NAME            5	# "trouver_livres_par_auteur"
+	LOAD_LOCALS           
+	RETURN_VALUE          
+.code_end
+	"__main__"
+	"Hugo"
+	"Victor"
+	"Dumas"
+	"Alexandre"
+	"Les Miserables"
+	1862
+	"Notre-Dame de Paris"
+	1831
+	"Le Comte de Monte-Cristo"
+	1844
+	"Tous les livres de la bibliotheque :"
+	"\nLivres de Victor Hugo :"
+	None
+	( )
+	( )
+	( )
+
+.names
+	"Auteur"
+	"Livre"
+	"Bibliotheque"
+	"__name__"
+	"auteur1"
+	"auteur2"
+	"livre1"
+	"livre2"
+	"livre3"
+	"bibliotheque"
+	"ajouter_livre"
+	"afficher_livres"
+	"trouver_livres_par_auteur"
+	"livres_hugo"
+	"livre"
+
+.text
+.line 3
+	LOAD_CONST            0	# "Auteur"
+	LOAD_CONST            20	# ( )
+	LOAD_CONST            1	# <code:"Auteur">
+	MAKE_FUNCTION         0
+	CALL_FUNCTION         0
+	BUILD_CLASS           
+	STORE_NAME            0	# "Auteur"
+.line 11
+	LOAD_CONST            2	# "Livre"
+	LOAD_CONST            21	# ( )
+	LOAD_CONST            3	# <code:"Livre">
+	MAKE_FUNCTION         0
+	CALL_FUNCTION         0
+	BUILD_CLASS           
+	STORE_NAME            1	# "Livre"
+.line 20
+	LOAD_CONST            4	# "Bibliotheque"
+	LOAD_CONST            22	# ( )
+	LOAD_CONST            5	# <code:"Bibliotheque">
+	MAKE_FUNCTION         0
+	CALL_FUNCTION         0
+	BUILD_CLASS           
+	STORE_NAME            2	# "Bibliotheque"
+.line 35
+	LOAD_NAME             3	# "__name__"
+	LOAD_CONST            6	# "__main__"
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_2
+.line 37
+	LOAD_NAME             0	# "Auteur"
+	LOAD_CONST            7	# "Hugo"
+	LOAD_CONST            8	# "Victor"
+	CALL_FUNCTION         2
+	STORE_NAME            4	# "auteur1"
+.line 38
+	LOAD_NAME             0	# "Auteur"
+	LOAD_CONST            9	# "Dumas"
+	LOAD_CONST            10	# "Alexandre"
+	CALL_FUNCTION         2
+	STORE_NAME            5	# "auteur2"
+.line 41
+	LOAD_NAME             1	# "Livre"
+	LOAD_CONST            11	# "Les Miserables"
+	LOAD_NAME             4	# "auteur1"
+	LOAD_CONST            12	# 1862
+	CALL_FUNCTION         3
+	STORE_NAME            6	# "livre1"
+.line 42
+	LOAD_NAME             1	# "Livre"
+	LOAD_CONST            13	# "Notre-Dame de Paris"
+	LOAD_NAME             4	# "auteur1"
+	LOAD_CONST            14	# 1831
+	CALL_FUNCTION         3
+	STORE_NAME            7	# "livre2"
+.line 43
+	LOAD_NAME             1	# "Livre"
+	LOAD_CONST            15	# "Le Comte de Monte-Cristo"
+	LOAD_NAME             5	# "auteur2"
+	LOAD_CONST            16	# 1844
+	CALL_FUNCTION         3
+	STORE_NAME            8	# "livre3"
+.line 46
+	LOAD_NAME             2	# "Bibliotheque"
+	CALL_FUNCTION         0
+	STORE_NAME            9	# "bibliotheque"
+.line 49
+	LOAD_NAME             9	# "bibliotheque"
+	LOAD_ATTR             10
+	LOAD_NAME             6	# "livre1"
+	CALL_FUNCTION         1
+	POP_TOP               
+.line 50
+	LOAD_NAME             9	# "bibliotheque"
+	LOAD_ATTR             10
+	LOAD_NAME             7	# "livre2"
+	CALL_FUNCTION         1
+	POP_TOP               
+.line 51
+	LOAD_NAME             9	# "bibliotheque"
+	LOAD_ATTR             10
+	LOAD_NAME             8	# "livre3"
+	CALL_FUNCTION         1
+	POP_TOP               
+.line 54
+	LOAD_CONST            17	# "Tous les livres de la bibliotheque :"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 55
+	LOAD_NAME             9	# "bibliotheque"
+	LOAD_ATTR             11
+	CALL_FUNCTION         0
+	POP_TOP               
+.line 58
+	LOAD_CONST            18	# "\nLivres de Victor Hugo :"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 59
+	LOAD_NAME             9	# "bibliotheque"
+	LOAD_ATTR             12
+	LOAD_NAME             4	# "auteur1"
+	CALL_FUNCTION         1
+	STORE_NAME            13	# "livres_hugo"
+.line 60
+	SETUP_LOOP            label_2
+	LOAD_NAME             13	# "livres_hugo"
+	GET_ITER              
+label_0:
+	FOR_ITER              label_1
+	STORE_NAME            14	# "livre"
+.line 61
+	LOAD_NAME             14	# "livre"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_ABSOLUTE         label_0
+label_1:
+	POP_BLOCK             
+	JUMP_FORWARD          label_2
+label_2:
+	LOAD_CONST            19	# None
+	RETURN_VALUE          
+
+# Disassembled Thu Jan 16 16:47:15 2025
+
